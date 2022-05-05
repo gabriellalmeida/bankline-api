@@ -23,7 +23,7 @@ public class Movimentacao {
 	@Column(name = "data_hora")
 	private LocalDateTime dataHora;
 	
-	private String descrcao;
+	private String descricao;
 	
 	private Double valor;
 	
@@ -32,6 +32,7 @@ public class Movimentacao {
 	
 	@Column(name = "id_conta")
 	private Integer idConta;
+	
 	public Integer getId() {
 		return id;
 	}
@@ -45,10 +46,10 @@ public class Movimentacao {
 		this.dataHora = dataHora;
 	}
 	public String getDescrcao() {
-		return descrcao;
+		return descricao;
 	}
-	public void setDescrcao(String descrcao) {
-		this.descrcao = descrcao;
+	public void setDescrcao(String descricao) {
+		this.descricao = descricao;
 	}
 	public double getValor() {
 		return valor;
