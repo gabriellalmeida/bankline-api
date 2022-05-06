@@ -11,6 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 
 @Entity
 @Table(name = "tab_movimentacao")
@@ -39,16 +41,17 @@ public class Movimentacao {
 	public void setId(Integer id) {
 		this.id = id;
 	}
+	@JsonFormat(pattern="yyyy-MM-dd HH:mm:ss") 
 	public LocalDateTime getDataHora() {
 		return dataHora;
 	}
 	public void setDataHora(LocalDateTime dataHora) {
 		this.dataHora = dataHora;
 	}
-	public String getDescrcao() {
+	public String getDescricao() {
 		return descricao;
 	}
-	public void setDescrcao(String descricao) {
+	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
 	public double getValor() {
